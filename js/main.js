@@ -12,10 +12,29 @@ let discountedPrice;
 // Chiedo all'utente il suo nome
 const userName = prompt("Inserire il proprio nome.");
 // bonus 2
-if (userName == "Stefano"){
+if (userName == "Stefano" || userName == "stefano"){
     message = alert ("Il viaggio è grauito.");
 }
-else{
+
+// Bonus 3
+else if (userName == "Tiziano" || userName == "tiziano"){
+    // Chiedo all'utente il numero di chilometri che vuole percorrere (via prompt)
+    userKil = parseInt(prompt("Inserire numero di chilometri che si vogliono percorrere."));
+    if (isNaN(userKil)){
+        message = alert("Valore non valido ricaricare la pagina e riprovare");
+
+    }
+    else{
+        const pricePerKilForTiziano = (0.50).toFixed(2);
+        const priceForTiziano = (pricePerKilForTiziano * userKil).toFixed(2);
+
+        console.log(pricePerKilForTiziano);
+
+        message = alert(`Utente: Tiziano
+            prezzo biglietto: € ${priceForTiziano}`);
+    }
+}
+else {
 
     // Chiedo all'utente il numero di chilometri che vuole percorrere (via prompt)
     userKil = parseInt(prompt("Inserire numero di chilometri che si vogliono percorrere."));
