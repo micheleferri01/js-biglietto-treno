@@ -11,3 +11,6 @@ const userKil = parseInt(prompt("Inserire numero di chilometri che si vogliono p
 const userAge = parseInt(prompt("Inserire età."));
 
 // Elaborazione
+
+// Calcolo il prezzo base del biglietto in base ai chilometri che l'utente vuole percorrere
+const basePrice = (pricePerK * userKil).toFixed(2);
