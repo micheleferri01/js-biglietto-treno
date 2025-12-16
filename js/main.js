@@ -27,9 +27,6 @@ else if (userName == "Tiziano" || userName == "tiziano"){
     else{
         const pricePerKilForTiziano = (0.50).toFixed(2);
         const priceForTiziano = (pricePerKilForTiziano * userKil).toFixed(2);
-
-        console.log(pricePerKilForTiziano);
-
         message = alert(`Utente: Tiziano
             prezzo biglietto: € ${priceForTiziano}`);
     }
@@ -69,7 +66,7 @@ else {
             // Mostro all'utente il nuovo costo del biglietto dopo aver applicato lo sconto del 20%
             // console.log(discountedPrice);
             message = alert(`L'utente è minorenne.
-            Prezzo biglietto: € ${discountedPrice}`)
+            Prezzo biglietto: € ${discountedPrice}`);
         }
         
         // ALTRIMENTI SE(l'utente è over 65)
