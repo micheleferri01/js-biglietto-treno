@@ -50,3 +50,11 @@ else if (userAge > 65){
 
 }
 
+// ALTRIMENTI
+else{
+    // Mostro all'utente il costo del biglietto base per i chilometri che vuole percorrere
+    // console.log(basePrice);
+    message = alert(`L'utente non rientra nelle categorie soggette a sconti.
+    Prezzo biglietto: € ${basePrice}`);
+
+}
