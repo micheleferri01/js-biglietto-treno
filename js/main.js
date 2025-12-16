@@ -7,10 +7,14 @@ let discountedPrice;
 // Raccolta dati
 
 // Chiedo all'utente il numero di chilometri che vuole percorrere (via prompt)
-const userKil = parseInt(prompt("Inserire numero di chilometri che si vogliono percorrere."));
+// const userKil = parseInt(prompt("Inserire numero di chilometri che si vogliono percorrere."));
+const userKil = 100;
+
 
 // Chiedo all'utente la sua età (via prompt)
-const userAge = parseInt(prompt("Inserire età."));
+// const userAge = parseInt(prompt("Inserire età."));
+const userAge = 15;
+
 
 // Elaborazione
 
@@ -19,5 +23,13 @@ const basePrice = (pricePerK * userKil).toFixed(2);
 
 // SE (l'utente è minorenne)
 if (userAge < 18) {
+    // calcolo lo sconto da applicare
      discount = (basePrice * 20 / 100).toFixed(2);
+
+    //  Applico sconto del 20 % sul costo base del biglietto
+    discountedPrice = (basePrice - discount).toFixed(2);
+
+    // Mostro all'utente il nuovo costo del biglietto dopo aver applicato lo sconto del 20%
+    console.log(discountedPrice);
+    // alert(`Prezzo biglietto: € ${discountedPrice}`)
 }
