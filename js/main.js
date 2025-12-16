@@ -13,7 +13,7 @@ const userKil = 100;
 
 // Chiedo all'utente la sua età (via prompt)
 // const userAge = parseInt(prompt("Inserire età."));
-const userAge = 15;
+const userAge = 75;
 
 
 // Elaborazione
@@ -31,5 +31,9 @@ if (userAge < 18) {
 
     // Mostro all'utente il nuovo costo del biglietto dopo aver applicato lo sconto del 20%
     console.log(discountedPrice);
-    // alert(`Prezzo biglietto: € ${discountedPrice}`)
+    // message = alert(`Prezzo biglietto: € ${discountedPrice}`)
+}
+else if (userAge > 65){
+    // calcolo lo sconto da applicare
+    discount = (basePrice * 40 / 100).toFixed(2);
 }
