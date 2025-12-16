@@ -1,6 +1,8 @@
 // Variabili globali
 const pricePerK = 0.21;
 let message;
+let discount;
+let discountedPrice;
 
 // Raccolta dati
 
@@ -14,3 +16,8 @@ const userAge = parseInt(prompt("Inserire età."));
 
 // Calcolo il prezzo base del biglietto in base ai chilometri che l'utente vuole percorrere
 const basePrice = (pricePerK * userKil).toFixed(2);
+
+// SE (l'utente è minorenne)
+if (userAge < 18) {
+     discount = (basePrice * 20 / 100).toFixed(2);
+}
