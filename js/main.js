@@ -36,4 +36,7 @@ if (userAge < 18) {
 else if (userAge > 65){
     // calcolo lo sconto da applicare
     discount = (basePrice * 40 / 100).toFixed(2);
+
+    //  Applico sconto del 40 % sul costo base del biglietto
+    discountedPrice = (basePrice - discount).toFixed(2);
 }
